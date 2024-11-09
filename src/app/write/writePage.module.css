@@ -63,3 +63,23 @@
     cursor: pointer;
     border-radius: 20px;
 }
+
+.progressContainer {
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .progressBar {
+    width: 100%;
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .progressFill {
+    height: 100%;
+    background-color: #4caf50; /* Or any color you like */
+    transition: width 0.2s ease;
+  }
+  

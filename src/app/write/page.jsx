@@ -25,6 +25,7 @@ const WritePage = () => {
   const [value, setValue] = useState("");
   const [title, setTitle] = useState("");
   const [catSlug, setCatSlug] = useState("");
+  const [progress, setProgress] = useState(0); // Track progress percentage
 
   useEffect(() => {
     const storage = getStorage(app);
@@ -39,6 +40,7 @@ const WritePage = () => {
         (snapshot) => {
           const progress =
             (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+          setProgress(progress); // Update progress state here
           console.log("Upload is " + progress + "% done");
           switch (snapshot.state) {
             case "paused":
@@ -53,6 +55,7 @@ const WritePage = () => {
         () => {
           getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
             setMedia(downloadURL);
+            setProgress(0); // Reset progress once the upload is complete
           });
         }
       );
@@ -113,7 +116,7 @@ const WritePage = () => {
       </select>
       <div className={styles.editor}>
         <button className={styles.button} onClick={() => setOpen(!open)}>
-          <Image src="/plus.png" alt="" width={16} height={16} />
+          <Image src="/plus.jpg" alt="" width={16} height={16} />
         </button>
         {open && (
           <div className={styles.add}>
@@ -144,6 +147,20 @@ const WritePage = () => {
           placeholder="Tell your story..."
         />
       </div>
+
+      {/* Added section to display progress */}
+      {file && progress > 0 && (
+        <div className={styles.progressContainer}>
+          <p>Upload Progress: {Math.round(progress)}%</p>
+          <div className={styles.progressBar}>
+            <div
+              className={styles.progressFill}
+              style={{ width: `${progress}%` }}
+            ></div>
+          </div>
+        </div>
+      )}
+
       <button className={styles.publish} onClick={handleSubmit}>
         Publish
       </button>
