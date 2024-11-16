@@ -23,7 +23,7 @@ const Comments = ({postSlug}) => {
 
     const {status} = useSession()
 
-    const {data,mutate, isLoading} = useSWR(`/api/comments?postSlug=${postSlug}`, fetcher);
+    const {data,mutate, isLoading} = useSWR(`https://fsdblogsite.vercel.app/api/comments?postSlug=${postSlug}`, fetcher);
 
     const [desc, setDesc] = useState("")
 
