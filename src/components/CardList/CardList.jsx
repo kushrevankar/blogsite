@@ -6,7 +6,7 @@ import Pagination from '../pagination/Pagination';
 import Card from '../card/Card';
 
 const getData = async (page,cat) => {
-  const res = await fetch(`/api/posts?page=${page}&cat=${cat || ""}`, {
+  const res = await fetch(`https://fsdblogsite.vercel.app/api/posts?page=${page}&cat=${cat || ""}`, {
     cache: "no-store",
   });
 
