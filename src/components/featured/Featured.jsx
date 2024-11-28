@@ -13,12 +13,12 @@ const Featured = () => {
           <Image src="/p1.jpeg" alt="" fill className={styles.image}/>
         </div>
         <div className={styles.textContainer}>
-          <h1 className={styles.postTitle}>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+          <h1 className={styles.postTitle}>Discover the Paradise of Kashmir</h1>
           <p className={styles.postDesc}>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-            Exercitationem vero rerum repudiandae recusandae voluptatibus totam iste perspiciatis, 
-            facilis voluptatum quibusdam provident officia. 
-            Ad aspernatur obcaecati nemo ea deleniti officia consectetur.
+            Step into the heart of Kashmir, a land of breathtaking landscapes and rich cultural heritage. 
+            From the serene Dal Lake to the majestic Himalayas, explore the stories, traditions, 
+            and wonders that make this region a true paradise on Earth. Discover hidden gems, travel tips, 
+            and firsthand experiences that will transport you to the enchanting beauty of Kashmir.
           </p>
           <button className={styles.button}>Read More</button>
         </div>
