@@ -9,13 +9,10 @@ const Footer = () => {
       <div className={styles.info}>
         <div className={styles.logo}>
           <Image src="/lol.jpg" alt="kashmir chronicles" width={50} height={50}/>
-          <h1 className={styles.logoText}>Kashmir Chronicles</h1>
+          <h1 className={styles.logoText}>Kush Revankar</h1>
         </div>
         <p className={styles.desc}>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-          Nesciunt mollitia reiciendis doloribus sequi a ea rem aut impedit nam minus repellendus, 
-          voluptate molestiae quaerat illum est quod, 
-          assumenda eos ut.
+          Third Year B.Tech Student, Data Science Aspirant
         </p>
         <div className={styles.icons}>
           <Image src="/facebook.png" alt="" width={18} height={18} />
